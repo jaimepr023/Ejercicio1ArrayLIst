@@ -11,19 +11,10 @@ namespace Ejercicio1ArrayList.Servicios
     {
         public char afirmacion()
         {
-            Console.WriteLine("¿Quieres volver a realizarlo todo? (s/n)")
+            Console.WriteLine("¿Quieres volver a realizarlo todo? (s/n)");
             char afirmacion = Convert.ToChar(Console.ReadLine());
                 return afirmacion;
         }
-
-        public string pedirApellido()
-        {
-      
-            string apellido = Console.ReadLine();
-            return apellido;
-        }
-
-     
 
         public void pedirDNI()
         {
@@ -45,11 +36,42 @@ namespace Ejercicio1ArrayList.Servicios
            
         }
 
+        public string pedirApellido()
+        {
+
+            string apellido = Console.ReadLine();
+            return apellido;
+        }
+
         public string pedirNombre()
         {
             Console.WriteLine("Dame tu nombre ");
             string nombre = Console.ReadLine();
             return nombre;
+        }
+
+        public void codigPostal()
+        {
+            int[] codigo = new int[] { 41001, 41002, 41003, 41004, 41005, 41005, 41006, 41007, 41008, 41009, 41010, 41011, 41012, 41013, 41014, 41015, 41016, 41017, 41018, 41019, 41020, 41092 };
+            Console.WriteLine("Dime el codigo postal de su municipio: ");
+            int CodigP = Int32.Parse(Console.ReadLine());
+
+          
+                if (codigo.Contains(CodigP))
+                {
+                    Console.WriteLine("El codigo postal de su municipio se encuentra en sevilla.");
+                }
+                else
+                {
+                    Console.WriteLine("El codigo postal de su municipio no se encuentra en sevilla.");
+                }
+        }
+
+        public string concatena(string apellido1, string apellido2, string nombre)
+        {
+           string nombreCompleto = String.Concat(apellido1 , " " , apellido2, ",", nombre);
+            Console.WriteLine(nombreCompleto);
+            return nombreCompleto;
         }
     }
 }

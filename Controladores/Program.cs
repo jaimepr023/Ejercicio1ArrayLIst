@@ -21,6 +21,8 @@ namespace Ejercicio1ArrayList
                 if (nombre != apellido1 | nombre != apellido2)
                 {
                     operaciones.pedirDNI();
+                    operaciones.codigPostal();
+                    operaciones.concatena(apellido1, apellido2, nombre);
 
                 }
                 else
