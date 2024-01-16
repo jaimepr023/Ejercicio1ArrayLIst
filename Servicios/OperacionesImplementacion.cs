@@ -70,8 +70,19 @@ namespace Ejercicio1ArrayList.Servicios
         public string concatena(string apellido1, string apellido2, string nombre)
         {
            string nombreCompleto = String.Concat(apellido1 , " " , apellido2, ",", nombre);
-            Console.WriteLine(nombreCompleto);
             return nombreCompleto;
+        }
+
+        public void separar(string apellido1, string apellido2, string nombre)
+        {
+           string nombreCompleto = concatena(apellido1, apellido2, nombre);
+            Console.WriteLine("El nombre completo es: " + nombreCompleto);
+
+            string[] separado = nombreCompleto.Split(",");
+
+            string apellidos = separado[0];
+
+            Console.WriteLine("LOs apellidos son: "+apellidos);
         }
     }
 }

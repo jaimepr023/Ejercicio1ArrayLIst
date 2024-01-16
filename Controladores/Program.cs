@@ -23,6 +23,7 @@ namespace Ejercicio1ArrayList
                     operaciones.pedirDNI();
                     operaciones.codigPostal();
                     operaciones.concatena(apellido1, apellido2, nombre);
+                    operaciones.separar(apellido1, apellido2, nombre);
 
                 }
                 else

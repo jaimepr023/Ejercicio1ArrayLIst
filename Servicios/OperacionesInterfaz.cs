@@ -18,7 +18,9 @@ namespace Ejercicio1ArrayList.Servicios
 
         public void codigPostal();
 
-        public string concatena(string apellido1,string apellido2, string nombre); 
+        public string concatena(string apellido1,string apellido2, string nombre);
+
+        public void separar(string apellido1, string apellido2, string nombre);
 
     }
 }
