@@ -22,5 +22,9 @@ namespace Ejercicio1ArrayList.Servicios
 
         public void separar(string apellido1, string apellido2, string nombre);
 
+        public void calcularTam(string apellido1, string apellido2, string nombre);
+
+        public void separarNombre(string nombre);
+
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
@@ -84,5 +86,40 @@ namespace Ejercicio1ArrayList.Servicios
 
             Console.WriteLine("LOs apellidos son: "+apellidos);
         }
+
+        public void calcularTam(string apellido1, string apellido2, string nombre)
+        {
+            string nombreTam=concatena(apellido1,apellido2, nombre);
+            int i;
+            for( i = 0; i < nombreTam.Length; i++)
+            {
+                i +=0;
+            }
+            Console.WriteLine("El tamaño del nombre concreto es: "+ i);
+            if (i > 10)
+            {
+                Console.WriteLine("El caracter en la decima podicion es: " + nombreTam[10]);
+            } else { Console.WriteLine("Error no existe"); }
+            Console.WriteLine("La primera vez que aparece la letra A es en la posicion : " + nombreTam.IndexOf('a'));
+            Console.WriteLine("La primera vez que aparce la R en el nombre completo entre la posicion 3 y 10 es: " + nombreTam.IndexOf('r', 2, 9));
+           Console.WriteLine("En esta posicion aparece la cadena de caracter ARC: " + nombreTam.IndexOf("arc"));
+        }
+
+        public void separarNombre(string nombre)
+        {
+            ArrayList listChara = new ArrayList();
+            int i;
+            Console.Write(nombre + "-->");
+            for (i = 0; i < nombre.Length; i++)
+            {
+                Console.Write(nombre[i]+" ");
+            }
+            Console.WriteLine();
+
+        }
+
+
+        
+
     }
 }

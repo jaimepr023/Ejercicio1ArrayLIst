@@ -20,10 +20,12 @@ namespace Ejercicio1ArrayList
 
                 if (nombre != apellido1 | nombre != apellido2)
                 {
-                    operaciones.pedirDNI();
-                    operaciones.codigPostal();
+                     operaciones.pedirDNI();
+                     operaciones.codigPostal();
                     operaciones.concatena(apellido1, apellido2, nombre);
                     operaciones.separar(apellido1, apellido2, nombre);
+                    operaciones.calcularTam(apellido1, apellido2, nombre);
+                    operaciones.separarNombre(nombre);
 
                 }
                 else
